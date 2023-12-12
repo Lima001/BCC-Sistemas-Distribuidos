@@ -20,16 +20,14 @@ def timeout(addr):
 # 0 --> Não suspeito
 # 1 --> Suspeito
 nodes_state = dict()
-nodes_state[config.ip_list[0]] = 1
-nodes_state[config.ip_list[1]] = 1
-nodes_state[config.ip_list[2]] = 1
+for i in range(len(config.ip_list)):
+    nodes_state[config.ip_list[i]] = 1
+
 
 nodes_thread = dict()
-nodes_thread[config.ip_list[0]] = [None, threading.Event()]
+for i in range(len(config.ip_list)):
+    nodes_thread[config.ip_list[i]] = [None, threading.Event()]
 
-nodes_thread[config.ip_list[1]] = [None, threading.Event()]
-
-nodes_thread[config.ip_list[2]] = [None, threading.Event()]
 
 def run_server():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:

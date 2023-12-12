@@ -1,5 +1,6 @@
 # Lista de ip dos nós da rede
-ip_list = ['191.52.7.28', '191.52.7.27', '191.52.7.26']
+#ip_list = ['191.52.7.28', '191.52.7.27', '191.52.7.26']
+ip_list = [f"191.52.7.{i}" for i in range(28,10,-1)]
 
 # Porta usada para a comunicação
 port = 5000
