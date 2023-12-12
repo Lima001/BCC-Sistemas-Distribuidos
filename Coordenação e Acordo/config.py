@@ -2,7 +2,7 @@
 #ip_list = ['191.52.7.28', '191.52.7.27', '191.52.7.26']
 ip_list = [f"191.52.7.{i}" for i in range(28,20,-1)]
 ip_list += [f"191.52.7.{i}" for i in range(38,32,-1)]
-ip_list += [31]
+ip_list += ["191.52.7.31"]
 
 # Porta usada para a comunicação
 port = 5000
